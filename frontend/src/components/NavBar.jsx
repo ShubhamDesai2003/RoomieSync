@@ -1,0 +1,17 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './NavBar'; // Optional: You can add a CSS file for styling
+
+
+const NavBar = () => {
+    return (
+        <nav>
+            <ul>
+                <li><Link to="/login">Login</Link></li>
+                <li><Link to="/register">Register</Link></li>
+            </ul>
+        </nav>
+    );
+};
+
+export default NavBar;

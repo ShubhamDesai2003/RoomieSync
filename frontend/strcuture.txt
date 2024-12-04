@@ -1,0 +1,30 @@
+roommates-app/
+│
+├── frontend/             # React application
+│   ├── public/           # Public assets (index.html, images)
+│   ├── src/
+│   │   ├── components/   # React components (e.g., Calendar, Chat, ExpenseManager)
+│   │   ├── pages/        # Page-level components (Home, Dashboard)
+│   │   ├── services/     # API service to interact with backend
+│   │   ├── App.js        # Root component
+│   │   └── index.js      # React entry point
+│   ├── package.json      # React dependencies
+│   └── .env              # Environment variables (e.g., API_URL)
+│
+├── backend/              # Spring Boot backend
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/
+│   │   │   │       └── roommatesapp/
+│   │   │   │           ├── controllers/   # REST API controllers
+│   │   │   │           ├── models/        # Java models (Room, Event, Expense)
+│   │   │   │           ├── repositories/  # MongoDB repositories
+│   │   │   │           ├── services/      # Business logic (RoommateService, ExpenseService)
+│   │   │   │           └── RoommatesApp.java   # Main application entry
+│   │   ├── resources/
+│   │   │   └── application.properties    # Spring Boot configuration (DB settings, ports)
+│   ├── pom.xml            # Maven dependencies
+│   └── Dockerfile         # Dockerfile for containerizing the backend (optional)
+│
+└── README.md              # Documentation

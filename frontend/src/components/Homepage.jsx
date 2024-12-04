@@ -1,37 +1,34 @@
-// frontend/src/components/HomePage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Homepage.css'; // External CSS file for styling
+import './HomePage.css';
 
 const HomePage = () => {
-    return (
-        <div className="home-page">
-            <header className="home-header">
-                <h1>Welcome to RoomSync</h1>
-                <p>Your ultimate roommate collaboration platform</p>
-            </header>
-
-            <div className="home-content">
-                <section className="home-features">
-                    <h2>Features</h2>
-                    <ul>
-                        <li>💬 Live Chat with Roommates</li>
-                        <li>📅 Shared Calendar for Room Events</li>
-                        <li>💸 Manage Expenses with Roommates</li>
-                    </ul>
-                </section>
-
-                <div className="home-actions">
-                    <Link to="/register" className="home-button">Register</Link>
-                    <Link to="/login" className="home-button">Login</Link>
-                </div>
-            </div>
-
-            <footer className="home-footer">
-                <p>RoomSync &copy; 2024. Bringing harmony to shared living.</p>
-            </footer>
+  return (
+    // <div className="home-page">
+      <div className="content-container">
+        {/* Left Section: Heading, description, and buttons */}
+        <div className="text-section">
+          <h1>Welcome to RoomieSync</h1>
+          <p>
+            A smart way to manage your shared living space. Collaborate with your roommates on events,
+            expenses, and chat—all in one place.
+          </p>
+          <div className="cta-buttons">
+            <Link to="/api/auth/login" className="cta-button">Login</Link>
+            <Link to="/api/auth/register" className="cta-button cta-register">Register</Link>
+          </div>
         </div>
-    );
+
+        {/* Right Section: Image */}
+        <div className="image-section">
+          <img
+            src="hero1.jpg"// Replace with your own image URL
+            alt="Roommates Collaboration"
+          />
+        </div>
+      </div>
+    // </div>
+  );
 };
 
 export default HomePage;
